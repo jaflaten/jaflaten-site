@@ -806,7 +806,7 @@ The posts are on the home page. Let's add a link from there to the post. Since t
     <html>
     <body>
       {{ range first 10 .Data.Pages }}
-        <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+        <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
       {{ end }}
     </body>
     </html>
@@ -923,14 +923,14 @@ Notice that the "about" link is listed with the posts? That's not desirable, so 
       <h1>posts</h1>
       {{ range first 10 .Data.Pages }}
         {{ if eq .Type "post"}}
-          <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
         {{ end }}
       {{ end }}
     
       <h1>pages</h1>
       {{ range .Data.Pages }}
         {{ if eq .Type "page" }}
-          <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
         {{ end }}
       {{ end }}
     </body>
@@ -1005,14 +1005,14 @@ Let's change the home page template to use these new partials.
 <h1>posts</h1>
 {{ range first 10 .Data.Pages }}
   {{ if eq .Type "post"}}
-    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
   {{ end }}
 {{ end }}
 
 <h1>pages</h1>
 {{ range .Data.Pages }}
   {{ if or (eq .Type "page") (eq .Type "about") }}
-    <h2><a href="{{ .Permalink }}">{{ .Type }} - {{ .Title }} - {{ .RelPermalink }}</a></h2>
+    <h2><a href="{{ .RelPermalink }}">{{ .Type }} - {{ .Title }} - {{ .RelPermalink }}</a></h2>
   {{ end }}
 {{ end }}
 {{ partial "footer.html" . }}
