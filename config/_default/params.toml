@@ -24,8 +24,8 @@ otherSearchableFields = ["Tags", "Categories", "CustomField"] # As they appear i
 
 # Site logo
 [logo]
-  lightMode = "images/compose.svg"
-  darkMode = "images/compose-light.svg"
+  lightMode = "images/dino3.svg"
+  darkMode = "images/dino3.svg"
 
 [source]
   name = "GitHub"
@@ -33,8 +33,6 @@ otherSearchableFields = ["Tags", "Categories", "CustomField"] # As they appear i
   iconDark = "images/GitHubMarkDark.svg"
   url = "https://github.com/jaflaten/jaflaten-site"
 
-# optional
-# attribution. Feel free to delete this
 [author]
-  name = "Weru"
-  url = "https://neuralvibes.com/author/"
+  name = "Jørn-Are Flaten"
+  url = "/about/"

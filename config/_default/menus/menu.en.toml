@@ -4,20 +4,17 @@
   weight = 5
   url = "blog/"
 
-[[main]]
-  name = "Docs"
-  weight = 2
-  url = "docs/"
+#[[main]]
+#  name = "Docs"
+#  weight = 2
+#  url = "docs/"
+
 
 [[main]]
-  name = "Tutorials"
+  name = "About"
   weight = 2
-  url = "tutorials/"
+  url = "about/"
 
-[[main]]
-  name = "Example"
-  weight = 3
-  url = "https://docs.neuralvibes.com"
 
 # [[main]]
 #   name = "Blog"

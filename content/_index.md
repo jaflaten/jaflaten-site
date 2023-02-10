@@ -8,12 +8,13 @@ fileLink = "content/projects.csv"
 title = "Projects"
 
 +++
+<br>
 {{< block "grid-2" >}}
 {{< column >}}
 
-# Flaten Dev Blog
+# Flaten Developer Blog
 
-Jørn-Are Flaten is a developer and dog owner who writes about development of applications, APIs, deep learning and different things related to technology. 
+Jørn-Are Flaten is a developer and dog owner who writes about application development, APIs, deep learning and different things that interest me. 
 
 <!-- {{< tip "warning" >}}
 Feel free to open a [PR](https://github.com/onweru/compose/pulls), raise an [issue](https://github.com/onweru/compose/issues/new/choose "Open a Github Issue")(s) or request new feature(s). {{< /tip >}}
@@ -25,10 +26,9 @@ Or, [generate graphs, charts](docs/compose/graphs-charts-tables/#show-a-pie-doug
 {{< /tip >}} -->
 
 {{< button "blog/" "Read my blog" >}}
-<!-- {{< button "https://github.com/onweru/compose" "Download Theme" >}} -->
 {{< /column >}}
 
 {{< column >}}
-![diy](/images/scribble.jpg)
+![diy](/images/dino2.png)
 {{< /column >}}
 {{< /block >}}
