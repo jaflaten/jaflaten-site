@@ -25,7 +25,7 @@ otherSearchableFields = ["Tags", "Categories", "CustomField"] # As they appear i
 # Site logo
 [logo]
   lightMode = "images/dino3.svg"
-  darkMode = "images/dino3.svg"
+  darkMode = "images/dino3-light.svg"
 
 [source]
   name = "GitHub"
