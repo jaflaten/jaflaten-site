@@ -1,5 +1,5 @@
 +++
-title = "Flaten Dev Blog"
+title = "Flaten Developer Blog"
 [data]
 baseChartOn = 3
 colors = ["#627c62", "#11819b", "#ef7f1a", "#4e1154"]

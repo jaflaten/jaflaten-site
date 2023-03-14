@@ -100,7 +100,7 @@ Store these images in the `static/images` directory.
 
 **Result**
 
-{{< picture "compose.svg" "compose-light.svg" "Compose Logo" >}}
+{{< picture "dino3.svg" "dino3-light.svg" "Dino Logo" >}}
 
 ### Gallery
 
