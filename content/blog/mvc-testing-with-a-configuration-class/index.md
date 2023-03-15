@@ -13,9 +13,9 @@ Writing a test for a controller I discovered something I would like to share. Wh
 
 
 ### Background
-A little bit of background to the problem. This controller was added to a existing project containing countless packages. To run the test i would need to load the application context, but to avoid loading all of it I created a inner static class in my test class. This inner static class serves as a TestApp which is annotated by @ComponentScan and where I tell it which packages to include. In addition this class is annotated with @SpringBootConfiguration which includes, among other annotations, the @Configuration which means that the class is declared as a bean and can be picked up by the Spring container, and therefore found by @ComponentScan. 
+A little bit of background to the problem. This controller was added to a existing project containing countless packages. To run the test I would need to load the application context, but to avoid loading all of it I created a inner static class in my test class. This inner static class serves as a TestApp which is annotated by ```@ComponentScan``` and where I tell it which packages to include. In addition this class is annotated with ```@SpringBootConfiguration``` which includes, among other annotations, the ```@Configuration``` which means that the class is declared as a bean and can be picked up by the Spring container, and therefore found by ```@ComponentScan```. 
 
-The test-class needs annotated with ```@WebAppconfiguration``` and ```@ContextConfiguration```to properly load the application context as the webAppContext is added to the MockMvcBuilders when creating the mockMvc object used in the tests.  I attempted to get this working by annotating the test-class with ```@SpringBootTest(classes = ControllerTest.TestApp.class)``` to tell it to use the inner class. However this did not work as the result was a 406 whenever the controller attempted to return anything with a body. The solution was to remove the ```@SpringBootTest``` annotation and replace it with ```@WebMvcTest``` instead. Below I will explain what this looks like with a few examples. 
+The test-class needs annotated with ```@WebAppconfiguration``` and ```@ContextConfiguration``` to properly load the application context as the webAppContext is added to the MockMvcBuilders when creating the mockMvc object used in the tests.  I attempted to get this working by annotating the test-class with ```@SpringBootTest(classes = ControllerTest.TestApp.class)``` to tell it to use the inner class. However this did not work as the result was a 406 whenever the controller attempted to return anything with a body. The solution was to remove the ```@SpringBootTest``` annotation and replace it with ```@WebMvcTest``` instead. Below I will explain what this looks like with a few examples. 
 
 If you are unsure or have forgotten what the 200, 204, and 406 HTTP status codes means, here is a short reminder:
 
@@ -80,7 +80,7 @@ In the test I wanted to mock the service, and when mocking something the test ne
     }
 ```    
 
-The ```status()``` method in the ```.andExpect(status().isOk())```is actually from ```MockMvcResultMatchers```, and the same with ```content()```. These are imported at the top of the class via a static import which exposes those methods and makes them available to use without first specifying the class name. See the [GitHub repository] for examples.
+The ```status()``` method in the ```.andExpect(status().isOk())``` is actually from ```MockMvcResultMatchers```, and the same with ```content()```. These are imported at the top of the class via a static import which exposes those methods and makes them available to use without first specifying the class name. See the [GitHub repository] for examples.
 
 After the API-call has been done and the status code returned I use Mockito again to ensure that the service-method has been called exactly one time. This is done using the ```Mockito.verify()```method. This has also been imported as a static method to make the code shorter and more concise, this is a personal preference.
 
@@ -102,6 +102,19 @@ To fix the HTTP status 406 and get the 200 OK return code that was expected I ha
 @WebAppConfiguration
 @WebMvcTest
 public class UtilityServletControllerTest {
+
+...
+// initializing the mockMvc
+    @BeforeEach
+    public void setup() {
+        mockMvc = MockMvcBuilders
+                .webAppContextSetup(context)
+                .build();
+        ... 
+    }
+...
+
+}                
 ```
 
 
