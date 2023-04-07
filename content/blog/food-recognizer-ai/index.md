@@ -62,8 +62,6 @@ Running several epochs had a decent improvement upon accuracy and reduction of t
 
 
 ---
-<!-- write more... -->
-
 
 
 ### Related links
@@ -73,3 +71,18 @@ My code is available on my [GitHub] if you want to check out the code.
 The model is trained in this [Kaggle notebook] and the notebook for the [application].
 
 The model and the training, validation and test [dataset] can be found on Kaggle.
+
+<!-- Ide: legg inn video frå silicon valley med not hot dog  -->
+
+---
+
+### Try it out!
+
+If you want to try the model you can do so below: 
+
+<script
+	type="module"
+	src="https://gradio.s3-us-west-2.amazonaws.com/3.24.1/gradio.js"
+></script>
+
+<gradio-app src="https://jaflaten-food-recognizer-app.hf.space"></gradio-app>
