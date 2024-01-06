@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Flaten Dev Blog</title>
+    <link>https://example.com/blog/</link>
+    <description>Recent content in Blog on Flaten Dev Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://example.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dependency injection with Kotlin Ktor</title>
+      <link>https://example.com/blog/kotlin-di/</link>
+      <pubDate>Tue, 03 Oct 2023 14:41:09 +0200</pubDate>
+      
+      <guid>https://example.com/blog/kotlin-di/</guid>
+      <description>It´s been a long time... This blogpost has been a very long time coming, over six months in fact. Not because it would take so long to write in itself, but because I have had a lot of other priorities and creating online content has been put far down the list. The longer time passes between each time I work on the post or any other projects for that matter it seems that the hurdle to overcome seems to be larger and larger every day.</description>
+    </item>
+    
+    <item>
+      <title>Food Recognizer Application</title>
+      <link>https://example.com/blog/food-recognizer-ai/</link>
+      <pubDate>Fri, 31 Mar 2023 07:50:01 +0200</pubDate>
+      
+      <guid>https://example.com/blog/food-recognizer-ai/</guid>
+      <description>I have been working on a project to create a application to recognize food in images. This was done using deep learning, a subset of machine learning, to train a model and then create a simple application based on the model.
+Background The idea behind this project is that using computer vision based on deep learning it is potentially possible to revolutionize how we track food intake. By creating a system that can automatically recognize food in pictures that would allow for much simpler logging of food intake.</description>
+    </item>
+    
+    <item>
+      <title>Mvc Testing With a Configuration Class</title>
+      <link>https://example.com/blog/mvc-testing-with-a-configuration-class/</link>
+      <pubDate>Tue, 14 Mar 2023 06:51:00 +0100</pubDate>
+      
+      <guid>https://example.com/blog/mvc-testing-with-a-configuration-class/</guid>
+      <description>Mvc Testing With a Configuration Class Writing a test for a controller I discovered something I would like to share. What I noticed was that even if my MockMvc test was expecting 200, and my controller returned either 200 or 204, my test failed with a 406.
+Background A little bit of background to the problem. This controller was added to an existing project containing countless packages. To run the test I would need to load the application context, but to avoid loading all of it I created a inner static class in my test class.</description>
+    </item>
+    
+  </channel>
+</rss>
